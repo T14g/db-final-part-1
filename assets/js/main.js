@@ -10,6 +10,7 @@ $(document).ready(function(){
 
         if(runValidations()){
             toastr.success("Formulário validado com sucesso!");
+            showSuccessMsg();
         }
 
     });
@@ -124,9 +125,28 @@ function runValidations() {
     return validated;
 }
 
-//Exibe mensagem de successo no console.log
-function showSuccess() {
-    console.log("Formulário validado com sucesso");
+
+//Exibe dados no console
+function showSuccessMsg() {
+
+    var dateParts =  $('#nascimento').val().split('-');
+    var formatedDate = '';
+    formatedDate = dateParts[2] + '-' + dateParts[1] + '-' + dateParts[0];
+
+    console.log("Formulário validado! Confira os dados abaixo:");
+    console.log("Nome completo: " + $('#nome-completo').val());
+    console.log("Data de nascimento: " + formatedDate);
+    console.log("CPF: " + $('#cpf').val()); 
+    console.log("Celular: " + $('#celular').val());
+    console.log("Email: " + $('#email').val());
+    console.log("CEP: " + $('#cep').val());
+    console.log("Logradouro: " + $('#logradouro').val());
+    console.log("Número: " + $('#numero').val());
+    console.log("Complemento: " + $('#complemento').val());
+    console.log("Cidade: " + $('#cidade').val());
+    console.log("UF: " + $('#uf').val());
+    console.log("BIO: " + $('#bio').val());
+
 }
 
 //Valida o nome que precisa ter pelo menos 3 letras
