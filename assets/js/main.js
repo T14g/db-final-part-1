@@ -1,6 +1,7 @@
 //Input Masks
 $('#cpf').inputmask('999.999.999-99');
 $('#celular').inputmask('(99) 99999-9999');
+$('#cep').inputmask('99999-999', {"placeholder": ""});
 
 $(document).ready(function(){
 
@@ -14,6 +15,17 @@ $(document).ready(function(){
         // console.log(validateEmail());
         // console.log(validateCellphone());
     })
+
+    //Event Handler ao digitar um CEP
+    $('#cep').keyup(function(){
+
+        var cepFormated = $(this).val().replace('-','');
+
+        if(cepFormated.length === 8){
+            getCepData(cepFormated);
+        }
+
+    });
 
 
 });
@@ -85,6 +97,33 @@ function validateCellphone() {
 //Valida CEP
 
 //Busca informações relativas ao CEP
+function getCepData(cep){
+
+    var url = 'https://api.postmon.com.br/v1/cep/' + cep;
+    console.log("Pesquisando cep");
+
+    axios.get(url)
+        .then(function(response) {
+
+            var data = response.data;
+            updateAddress(data);
+
+    })
+        .catch(function(error) {
+            console.log(error)
+    })
+
+}
+
+//Atualiza informações de logradouro, cidade, estado
+function updateAddress(data) {
+
+    $('#logradouro').val(data.logradouro);
+    $('#cidade').val(data.cidade);
+    $('#bairro').val(data.bairro);
+    $('#uf').val(data.estado);
+
+}
 
 //Valida número
 
