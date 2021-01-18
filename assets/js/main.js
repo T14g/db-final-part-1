@@ -9,7 +9,7 @@ $(document).ready(function(){
         e.preventDefault();
 
         if(runValidations()){
-            console.log("sucess!");
+            toastr.success("Formulário validado com sucesso!");
         }
 
     });
@@ -22,7 +22,7 @@ $(document).ready(function(){
         if(cepFormated.length === 8){
             getCepData(cepFormated);
         }
-        
+
     });
 
 
@@ -57,68 +57,68 @@ function updateAddress(data) {
 
 }
 
-//Executa todas as validações e retorna o resultado
+//Executa todas as validações mostrando erros com o Toastr e retorna o resultado
 function runValidations() {
     var validated = true;
 
     if(!validateName()){
         validated = false;
-        console.log('Nome inválido');
+        toastr.error('Nome inválido');
     }
 
     if(!validateDate()){
         validated = false;
-        console.log('Data inválida');
+        toastr.error('Data inválida');
     }
 
     if(!validateCPF()){
         validated = false;
-        console.log('CPF inválido');
+        toastr.error('CPF inválido');
     }
 
     if(!validateEmail()){
         validated = false;
-        console.log('Email inválido');
+        toastr.error('Email inválido');
     }
     
     if(!validateCellphone()){
         validated = false;
-        console.log('Celular inválido');
+        toastr.error('Celular inválido');
     }
 
     if(!validateCEP()){
         validated = false;
-        console.log('CEP inválido');
+        toastr.error('CEP inválido');
     }
 
     if(!validateLogradouro()){
         validated = false;
-        console.log('Logradouro inválido');
+        toastr.error('Logradouro inválido');
     }
 
     if(!validateNumero()){
         validated = false;
-        console.log('Número da casa/apto inválido');
+        toastr.error('Número da casa/apto inválido');
     }
 
     if(!validateCity()){
         validated = false;
-        console.log('Cidade inválida');
+        toastr.error('Cidade inválida');
     }
 
     if(!validateBairro()){
         validated = false;
-        console.log('Bairro inválido');
+        toastr.error('Bairro inválido');
     }
 
     if(!validateUF()){
         validated = false;
-        console.log('UF inválida');
+        toastr.error('UF inválida');
     }
 
     if(!validateBio()){
         validated = false;
-        console.log('Bio inválida');
+        toastr.error('Bio inválida');
     }
 
     return validated;
