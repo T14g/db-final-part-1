@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github API Part</title>
+    <title>Part I - Formulário de cadastro</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
@@ -15,122 +15,111 @@
     </header>    
 
     <div class="container">
+
       <div class="row mt-5">
         <div class="col-md-12">
+
           <h4 class="mb-3">Formulário de contato do site</h4>
+
           <form class="form-contato" action="" method="POST">
+
             <div class="row">
+
               <div class="col-md-6 mb-3">
                 <label for="nome-completo">Nome completo</label>
-                <input type="text" class="form-control" id="nome-completo" placeholder="" value="">
-                <div class="invalid-feedback">
-                  
-                </div>
+                <input type="text" class="form-control" id="nome-completo" placeholder="Nome Sobrenome">
               </div>
+
               <div class="col-md-6 mb-3">
                 <label for="nascimento">Data de nascimento</label>
-                <input type="date" class="form-control" id="nascimento" placeholder="" value="">
-                <div class="invalid-feedback">
-                  
-                </div>
+                <input type="date" class="form-control" id="nascimento">
               </div>
+
             </div>
 
             <div class="row">
+
               <div class="col-md-6 mb-3">
                 <label for="cpf">CPF</label>
-                <input type="text" class="form-control" id="cpf" placeholder="" value="">
-                <div class="invalid-feedback">
-                  
-                </div>
+                <input type="text" class="form-control" id="cpf">
               </div>
+
               <div class="col-md-6 mb-3">
                 <label for="celular">Celular</label>
-                <input type="text" class="form-control" id="celular" placeholder="" value="">
-                <div class="invalid-feedback">
-                  
-                </div>
+                <input type="text" class="form-control" id="celular" placeholder="(51) 99999-9999">
               </div>
+
             </div>
 
             <div class="row">
+
               <div class="col-md-6 mb-3">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                <div class="invalid-feedback">
-                  
-                </div>
+                <input type="email" class="form-control" id="email" placeholder="usuario@email.com">
               </div>
+
               <div class="col-md-6 mb-3">
                 <label for="cep">CEP</label>
-                <input type="text" class="form-control" id="cep" placeholder="" value="">
-                <div class="invalid-feedback">
-                  
-                </div>
+                <input type="text" class="form-control" id="cep">
               </div>
-            </div>
 
-            <div class="mb-3">
-              <label for="logradouro">Logradouro</label>
-              <input type="text" class="form-control" id="logradouro" placeholder="1234 Main St">
-              <div class="invalid-feedback">
-                
-              </div>
             </div>
 
             <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="cidade">Cidade</label>
-                <input type="text" class="form-control" id="cidade" placeholder="" value="">
-                <div class="invalid-feedback">
-                  
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="bairro">Bairro</label>
-                <input type="text" class="form-control" id="bairro" placeholder="" value="">
-                <div class="invalid-feedback">
-                  
-                </div>
-              </div>
-            </div>
 
-            <div class="row">
-              <div class="col-md-4 mb-3">
+              <div class="col-md-6 mb-3">
+                <label for="logradouro">Logradouro</label>
+              <input type="text" class="form-control" id="logradouro">
+              </div>
+
+              <div class="col-md-3 mb-3">
                 <label for="numero">Número</label>
                 <input type="numero" class="form-control" id="numero">
-                <div class="invalid-feedback">
-                  
-                </div>
               </div>
-              <div class="col-md-4 mb-3">
+
+              <div class="col-md-3 mb-3">
                 <label for="complemento">Complemento</label>
                 <input type="complemento" class="form-control" id="complemento">
-                <div class="invalid-feedback">
-                  
-                </div>
               </div>
+
+            </div>
+
+            <div class="row">
+
               <div class="col-md-4 mb-3">
-                <label for="uf">UF</label>
-                <input type="text" class="form-control" id="uf" placeholder="" value="">
-                <div class="invalid-feedback">
-                  
-                </div>
+                <label for="cidade">Cidade</label>
+                <input type="text" class="form-control" id="cidade">
               </div>
+
+              <div class="col-md-3 mb-3">
+                <label for="uf">UF</label>
+                <input type="text" class="form-control" id="uf">
+              </div>
+
+              <div class="col-md-5 mb-3">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id="bairro">
+              </div>
+
             </div>
 
             <div class="form-group">
               <label for="bio">Bio</label>
-              <textarea class="form-control" id="bio" rows="3"></textarea>
+              <textarea class="form-control" id="bio" rows="3" placeholder="Digite aqui sua bio"></textarea>
             </div>
 
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block mb-3" type="submit" id="send-form">Enviar</button>
+            <button class="btn btn-success btn-lg btn-block mb-3" type="submit" id="send-form">Enviar formulário</button>
+         
           </form>
         </div>
       </div>
        
     </div>
+
+    <footer>
+      <p class="font-weight-bold small text-center">&copy; 2021 Código desenvolvido por <a href="https://github.com/t14g" target="_blank">T14g</a></p>
+    </footer>
 
     <!-- Jquery CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
