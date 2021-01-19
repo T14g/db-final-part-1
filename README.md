@@ -26,7 +26,7 @@ O projeto roda diretamente no Google Chrome ou Firefox abrindo o index.html
 - O celular precisa ser preenchido e passar por um Regex;
 - O CEP precisa ser preenchido tendo no mínimo 8 dígitos;
 - O logradouro não pode ficar em branco;
-- O número da casa/apto não pode fiar em branco;
+- O número da casa/apto não pode ficar em branco;
 - A cidade não pode ficar em branco;
 - A UF não pode ficar em branco;
 - O bairro não pode ficar em branco;
